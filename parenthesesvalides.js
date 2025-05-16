@@ -8,8 +8,6 @@ function isValid(str){
     }
     for(i=0;i<=str.length;i++)
     {
-        // console.log(str[i])
-        // console.log(match[str[i]])
         if(str.length<=2){
 
             if(str[1]===match[str[0]]){
@@ -19,7 +17,7 @@ function isValid(str){
             console.log("false they don't match")
             return
         } 
-        }else{// la partie du else ne marche pas
+        }else{
             if(str[i+1]===match[str[i]]||str[i+(lenght-1)]===match[str[i]]){
                 console.log('true they match')
                 
@@ -32,9 +30,18 @@ function isValid(str){
     }
 }
 
-const str = "()"
-
-{[]}
-
-{{{}}}
-isValid(str);
+const str1 = "()"
+isValid(str1);
+// retourne `true`
+    
+const str2 = "()[]{}"
+isValid(str2);
+// retourne `true`
+    
+const str3 = "(]"
+isValid(str3);
+// retourne `false`
+    
+const str4 = "([])"
+isValid(str4);
+// retourne `true`
